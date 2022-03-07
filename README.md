@@ -44,16 +44,22 @@
 * Initializing the iteractive mode on terminal. Here it's possible interact with terminal:
 
     ```
-    docker run -it ubuntu bash
+    docker run -it ubuntu
     ```
 
-* Starting an existent containter:
+* Initializing with iteractive mode on terminal and removing container after it was stopped:
+
+    ```
+    docker run -it --rm ubuntu
+    ```
+
+* Starting an existent container:
 
     ```
     docker start "container_name"
     ```
 
-* Stopping a containter that was running:
+* Stopping a container that was running:
 
     ```
     docker stop "container_name"
