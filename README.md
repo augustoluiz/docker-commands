@@ -46,3 +46,15 @@
     ```
     docker run -it ubuntu bash
     ```
+
+* Starting an existent containter:
+
+    ```
+    docker start "container_name"
+    ```
+
+* Stopping a containter that was running:
+
+    ```
+    docker stop "container_name"
+    ```
