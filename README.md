@@ -32,3 +32,17 @@
         * ubuntu;
         * node;
         * mysql;
+
+
+* Executing the command "bash" after download the image and start the container:
+
+    ```
+    docker run ubuntu bash
+    ```
+
+
+* Initializing the iteractive mode on terminal. Here it's possible interact with terminal:
+
+    ```
+    docker run -it ubuntu bash
+    ```
