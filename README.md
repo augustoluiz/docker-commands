@@ -64,3 +64,13 @@
     ```
     docker stop "container_name"
     ```
+
+# Publishing ports with nginx
+
+* Redirecting port from docker host (8080) to container (80):
+
+    ```
+    docker run -p 8080:80 nginx
+    ```
+
+
