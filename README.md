@@ -73,4 +73,8 @@
     docker run -p 8080:80 nginx
     ```
 
+* Detacheding terminal from nginx's process:
 
+    ```
+    docker run -d -p 8080:80 nginx
+    ```
