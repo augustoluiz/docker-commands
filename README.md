@@ -65,7 +65,7 @@
     docker stop "container_name"
     ```
 
-# Publishing ports with nginx
+# Publishing Ports With Nginx
 
 * Redirecting port from docker host (8080) to container (80):
 
@@ -77,4 +77,23 @@
 
     ```
     docker run -d -p 8080:80 nginx
+    ```
+
+# Removing Containers
+
+* Removing an existent container by id:
+
+    ```
+    docker rm "container_id"
+    ```
+* Removing an existent container by name:
+
+    ```
+    docker rm "container_name"
+    ```
+
+* Removing a container in execution using -f to "force" the process to be executed:
+
+    ```
+    docker rm "container_name/container_id" -f
     ```
