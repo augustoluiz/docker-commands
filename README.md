@@ -122,3 +122,27 @@
     ```
     docker exec -it "container_name" "command_name"
     ```
+
+# Starting With Bind Mounts
+
+* Creating a volume (is a path that exists into the docker host) into the container:
+
+    ```
+    docker run -d --name "container_name" -p 8080:80 -v "local_path"
+    ```
+
+    * Examples of "local_path":
+        * ~/Projects/user/test123
+        * /home/etc/user/projects
+
+
+* Creating a volume with bind mounts(most recent command):
+
+    ```
+    docker run -d --name "container_name" -p 8080:80 --mount type=bind,source="local_path",target="target_path"
+    ```
+    * Obs: It's possible to get the local path using the command "$(pwd)", exemple:
+    
+        ```
+        docker run -d --name nginx -p 8080:80 --mount type=bind,source="$(pwd)"/html,target=/usr/share/nginx/html
+        ```
