@@ -53,6 +53,12 @@
     docker run -it --rm ubuntu
     ```
 
+* Initializing and defining a name to container:
+
+    ```
+    docker run --name "container_name" ubuntu
+    ```
+
 * Starting an existent container:
 
     ```
@@ -96,4 +102,23 @@
 
     ```
     docker rm "container_name/container_id" -f
+    ```
+
+# Accessing and Changing a Container's Files
+
+* Executing a command into the container:
+
+    ```
+    docker exec "container_name" "command_name"
+    ```
+
+    * Examples of commands:
+        * bash;
+        * ls;
+        * cd.
+
+* Executing a command into the container with interactive mode:
+
+    ```
+    docker exec -it "container_name" "command_name"
     ```
