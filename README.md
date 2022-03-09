@@ -146,3 +146,36 @@
         ```
         docker run -d --name nginx -p 8080:80 --mount type=bind,source="$(pwd)"/html,target=/usr/share/nginx/html
         ```
+
+# Working With Volumes
+
+* Listing all volumes:
+
+    ```
+    docker volume ls
+    ```
+
+* Creating a volume:
+
+    ```
+    docker volume create "volume_name"
+    ```
+
+* Inspecting a volume: 
+
+    ```
+    docker volume inspect "volume_name"
+    ```
+
+* Starting a container with volume:
+
+    ```
+    docker run -d --name "container_name" -p 8080:80 --mount type=volume,source="volume_name",target="target_path"
+    ```
+
+* Deleting all volumes and all directories and files in each one:
+
+    ```
+    docker volume prune
+    ```
+    
