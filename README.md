@@ -179,3 +179,16 @@
     docker volume prune
     ```
     
+# Understanding Images and DockerHub
+
+* Listing all images:
+
+    ```
+    docker images
+    ```
+
+* Removing a specific image:
+
+    ```
+    docker rmi "image_name:image_version"
+    ```
