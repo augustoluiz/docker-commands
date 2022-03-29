@@ -192,3 +192,15 @@
     ```
     docker rmi "image_name:image_version"
     ```
+
+# Creating The First Image With DockerFile
+
+* Sample example of dockerfile:
+
+    [nginx with vim](./dockerfile/Dockerfile)
+
+* After to create the dockerfile with the specifics instructions, you must run this command at the terminal to execute and build the file:
+
+    ```
+    docker build -t "name of image"
+    ```
