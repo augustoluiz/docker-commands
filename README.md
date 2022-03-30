@@ -104,6 +104,12 @@
     docker rm "container_name/container_id" -f
     ```
 
+* Removing all the containers filtering by each "container_id" and using -f to "force" the process to be executed:
+
+    ```
+    docker rm $(docker ps -a -q) -f
+    ```
+
 # Accessing and Changing a Container's Files
 
 * Executing a command into the container:
