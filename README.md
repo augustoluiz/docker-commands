@@ -226,7 +226,45 @@
     * Used to allow the communication beteween a lot of containers that are in distincts hosts;
 
 * Maclan
-    * It's responsable to set a MacAdress to the docker. Your usage is not comun;
+    * It's responsable to set a MacAddress to the docker. Your usage is not comun;
 
 * None
     * This type means that unexists a network and each container will be running in isolation;
+
+# Network's Commands
+
+* Listing all the networks
+
+    ```
+    docker network ls
+    ```
+
+* Removing all unused networks 
+
+    ```
+    docker network prune
+    ```
+
+* Displaying detailed information on one or more networks 
+
+    ```
+    docker network inspect "type_of_network"
+    ```
+
+* Creating a network 
+
+    ```
+    docker network create --driver "type_of_network" "name_of_network"
+    ```
+
+* Creating a container and force to use a specific network 
+
+    ```
+    docker run -d -it --name ubuntu1 --network "name_of_network" bash
+    ```
+
+* Connecting an existent container to a specific network 
+
+    ```
+    docker network connect "name_of_network" "name_of_network"
+    ```
