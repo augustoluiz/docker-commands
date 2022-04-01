@@ -210,3 +210,23 @@
     ```
     docker build -t "name of image"
     ```
+
+# Types of Networks
+
+* Brigde
+    * Most common type;
+    * Used to enable the connection between containers;
+
+* Host
+    * It's a merge beteween the docker host's network and docker's network;
+    * Here, the host and the container can share the same network;
+
+* Overlay
+    * It's the less common type of network;
+    * Used to allow the communication beteween a lot of containers that are in distincts hosts;
+
+* Maclan
+    * It's responsable to set a MacAdress to the docker. Your usage is not comun;
+
+* None
+    * This type means that unexists a network and each container will be running in isolation;
