@@ -26,5 +26,8 @@ WORKDIR /var/www
 RUN rm -rf /var/www/html
 COPY --from=builder /var/www/laravel .
 RUN chown -R www-data:www-data /var/www
+
+# making a simbolic link
+RUN ln -s public html
 EXPOSE 9000
 CMD ["php-fpm"]
