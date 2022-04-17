@@ -268,3 +268,9 @@
     ```
     docker network connect "name_of_network" "name_of_network"
     ```
+
+* Using the Docker-Compose - How To Up. 
+
+    ```
+    docker-compose up
+    ```
