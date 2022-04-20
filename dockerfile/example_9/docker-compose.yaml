@@ -1,6 +1,19 @@
 version: '3'
 
 services: 
+
+  app:
+    build:
+      context: ../example_5/node
+    container_name: app
+    networks: 
+      - node-network
+    volumes:
+      - ./node:/usr/src/app
+    tty: true
+    ports: 
+      - "3000:3000"
+
   db:
     image: mysql:5.7
     command: --innodb-use-native-aio=0
